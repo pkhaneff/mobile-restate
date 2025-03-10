@@ -13,22 +13,22 @@ module.exports = {
         "rubik-light": ["Rubik-Light", "sans-serif"],
         "rubik-medium": ["Rubik-Medium", "sans-serif"],
       },
-      color: {
-        "primary": {
+      colors: {
+        primary: {
           100: "#0061FF0A",
           200: "#0061FF1A",
           300: "#0061FF"
         },
-        "accent": {
+        accent: {
           100: "#FBFBFD"
         },
-        "black": {
+        black: {
           DEFAULT: "#000000",
           100: "#8C8E98",
           200: "#666876",
           300: "#191d31",
         },
-        "danger": "#F75555",
+        danger: "#F75555",
       }
     },
   },
