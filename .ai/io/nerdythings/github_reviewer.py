@@ -15,7 +15,7 @@ import json
 PR_SUMMARY_COMMENT_IDENTIFIER = "<!-- PR SUMMARY COMMENT -->"
 PR_SUMMARY_FILES_IDENTIFIER = "<!-- PR SUMMARY FILES -->"
 OWNER_COMMENT_IDENTIFIER = "<!-- OWNER COMMENT -->"
-EXCLUDED_FOLDERS = {".ai/io/nerdythings", ".github/workflows"}
+EXCLUDED_FOLDERS = {".ai/io/nerdythings", ".github/workflows", ".gitignore"}
 
 def main():
     vars = EnvVars()
