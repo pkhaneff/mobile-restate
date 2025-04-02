@@ -18,7 +18,7 @@ export default function Index() {
   const {data: latestProperties, loading: latestPropertiesLoading} = useAppwrite({
     fn: getLatestProperties
   })
-  const {data: properties, loading, refetch} = useAppwrite({
+  const {data: propertie, loading, refetch} = useAppwrite({
     fn: getProperties,
     params: {
       filter: params.filter!,
@@ -36,7 +36,7 @@ export default function Index() {
       query: params.query!,
       limit: 6
     })
-  }, [params.filter, params.query])
+  }, [params.filter, param.query])
 
   return (
     <SafeAreaView className="bg-white h-full">
@@ -63,7 +63,7 @@ export default function Index() {
                   <Text className="text-base text-black-300 font-rubik-medium">{user?.name}</Text>
                 </View>
               </View>
-              <Image source={icons.bell} className="size-6"/>
+              <Image source={icon.bell} className="size-6"/>
             </View>
             <Search/>
             <View className="my-5">
