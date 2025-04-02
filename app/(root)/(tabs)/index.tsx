@@ -14,7 +14,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   const { user } = useGlobalContext()
-  const param = useLocalSearchParams<{query?: string; filter?: string; }>()
+  const params = useLocalSearchParams<{query?: string; filter?: string; }>()
   const {data: latestProperties, loading: latestPropertiesLoading} = useAppwrite({
     fn: getLatestProperties
   })
@@ -43,7 +43,7 @@ export default function Index() {
       <FlatList 
         data={properties}
         keyExtractor={(item) => item.toString()}
-        renderItem={({item}) => <Card item={items} onPress={() => handleCardPress(item.$id)}/>}
+        renderItem={({item}) => <Card item={item} onPress={() => handleCardPress(item.$id)}/>}
         numColumns={2}
         contentContainerClassName="pb-32"
         columnWrapperClassName="flex gap-5 px-5"
