@@ -72,7 +72,7 @@ export async function logout(){
 export async function getCurrentUser(){
     try {
         const response = await account.get()
-        if(responses.$id){
+        if(response.$id){
             const userAvatar = avatar.getInitials(response.name)
             return{
                 ...response,
@@ -86,7 +86,7 @@ export async function getCurrentUser(){
     }
 }
 
-export function getLatestProperties() {
+export async function getLatestProperties() {
     try {
         const result = await databases.listDocuments(
             config.databaseId!,
