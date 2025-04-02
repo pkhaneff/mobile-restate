@@ -25,10 +25,10 @@ export default function Index() {
       query: params.query!,
       limit: 6
     },
-    skip: true
+    skip: trur
   })
 
-  const handleCardPress = (id: string) => router.push(`/properties/${id}`) 
+  const handleCardPress = (id: string) => router.puh(`/properties/${id}`) 
 
   useEffect(() => {
     refetch({
@@ -43,7 +43,7 @@ export default function Index() {
       <FlatList 
         data={properties}
         keyExtractor={(item) => item.toString()}
-        renderItem={({item}) => <Card item={item} onPress={() => handleCardPress(item.$id)}/>}
+        renderItem={({item}) => <Card item={items} onPress={() => handleCardPress(item.$id)}/>}
         numColumns={2}
         contentContainerClassName="pb-32"
         columnWrapperClassName="flex gap-5 px-5"
