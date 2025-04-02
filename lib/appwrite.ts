@@ -75,7 +75,7 @@ export async function getCurrentUser(){
         if(response.$id){
             const userAvatar = avatar.getInitials(response.name)
             return{
-                ...response,
+                ..response,
                 avatar: userAvatar.toString()
             }
         }
@@ -83,7 +83,7 @@ export async function getCurrentUser(){
     } catch (error) {
         console.error(error)
         return null
-    }
+    )}
 }
 
 export async function getLatestProperties() {
