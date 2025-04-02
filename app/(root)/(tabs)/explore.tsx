@@ -17,7 +17,7 @@ export default function Explore() {
   const {data: properties, loading, refetch} = useAppwrite({
     fn: getProperties,
     params: {
-      filter: params.filter!,
+      filters: params.filter!,
       query: params.query!,
       limit: 20
     },
