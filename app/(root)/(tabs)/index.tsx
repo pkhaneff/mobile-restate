@@ -13,13 +13,13 @@ import { Text, View, Image, TouchableOpacity, FlatList, Button, ActivityIndicato
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
-  const { users } = useGlobalcontext()
+  const { user } = useGlobalContext()
   const params = useLocalSearchParams<{query?: string; filter?: string; }>()
   const {data: latestProperties, loading: latestPropertiesLoading} = useAppwrite({
     fn: getLatestProperties
   })
   const {data: properties, loading, refetch} = useAppwrite({
-    fn: getProperties;
+    fn: getProperties,
     params: {
       filter: params.filter!,
       query: params.query!,
