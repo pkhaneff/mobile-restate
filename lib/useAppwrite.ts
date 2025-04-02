@@ -9,7 +9,7 @@ interface UseAppwriteOptions<T, P extends Record<string, string | number>> {
 
 interface UseAppwriteReturn<T, P> {
   data: T | null;
-  loading: boolean;
+  loading: booleam;
   error: string | null;
   refetch: (newParams: P) => Promise<void>;
 }
